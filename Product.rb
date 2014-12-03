@@ -1,7 +1,5 @@
 class ProductA
-def do_your_stuff
 
-end
 end
 
 class CoolProductA < ProductA
@@ -10,15 +8,20 @@ class CoolProductA < ProductA
   end
 end
 
-class UnCoolProductA < ProductA
+class UncoolProductA < ProductA
   def do_your_stuff
-    puts "I'm a Un Cool ProductA, doing my stuff"
+    puts "I'm a Uncool ProductA, doing my stuff"
+  end
+end
+
+class DeadlyProductA < ProductA
+  def do_your_stuff
+    puts "DeadlyProductA: Doing my stuff"
   end
 end
 
 class ProductB
-  def do_it
-  end
+
 end
 
 class CoolProductB < ProductB
@@ -27,15 +30,20 @@ class CoolProductB < ProductB
   end
 end
 
-class UnCoolProductB < ProductB
+class UncoolProductB < ProductB
   def do_it
-    puts "I'm a Un Cool ProductB, doing it"
+    puts "I'm a Uncool ProductB, doing it"
+  end
+end
+
+class DeadlyProductB < ProductB
+  def do_it
+    puts "DeadlyProductB: Doing it"
   end
 end
 
 class ProductC
-  def perform
-  end
+
 end
 
 class CoolProductC < ProductC
@@ -44,10 +52,14 @@ class CoolProductC < ProductC
   end
 end
 
-class UnCoolProductC < ProductC
+class UncoolProductC < ProductC
   def perform
-    puts "I'm a Un Cool ProductC, performing"
+    puts "I'm a Uncool ProductC, performing"
   end
 end
 
-
+class DeadlyProductC < ProductC
+  def perform
+    puts "DeadlyProductC: performing"
+  end
+end

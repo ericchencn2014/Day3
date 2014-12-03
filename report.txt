@@ -1,0 +1,1 @@
+there are a lot of design pattern, you need to choose the pattern depend on different issue, the intention is solving problems and simplify the procedure

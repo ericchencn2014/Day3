@@ -20,15 +20,31 @@ end
 class UnCoolFactory
 
   def create_product_A
-    return UnCoolProductA.new
+    return UncoolProductA.new
   end
 
   def create_product_B
-    return UnCoolProductB.new
+    return UncoolProductB.new
   end
 
   def create_product_C
-    return UnCoolProductC.new
+    return UncoolProductC.new
+  end
+
+end
+
+class DeadlyFactory
+
+  def create_product_A
+    return DeadlyProductA.new
+  end
+
+  def create_product_B
+    return DeadlyProductB.new
+  end
+
+  def create_product_C
+    return DeadlyProductC.new
   end
 
 end

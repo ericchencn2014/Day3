@@ -1,31 +1,39 @@
+require_relative 'product.rb'
 
-
-class Factory
-  def initialize
-    @value = 10
-  end
+class CoolFactory
 
   def create_product_A
-    return ConcreteFactory_A.new
+    return CoolProductA.new
   end
 
   def create_product_B
-    return ConcreteFactory_B.new
+    return CoolProductB.new
   end
 
   def create_product_C
-    return ConcreteFactory_C.new
+    return CoolProductC.new
   end
-
-  def self.get_instance
-    @instance ||= new
-  end
-
-  private_class_method :new
 end
 
 
 
+class UnCoolFactory
+
+  def create_product_A
+    return UnCoolProductA.new
+  end
+
+  def create_product_B
+    return UnCoolProductB.new
+  end
+
+  def create_product_C
+    return UnCoolProductC.new
+  end
+
+end
+
+=begin
 class ConcreteFactory_A
    def do_your_stuff
     puts "I'm a ProductA, doing my stuff"
@@ -45,4 +53,5 @@ class ConcreteFactory_C
     puts "I'm a ProductC, performing"
   end
 end
+=end
 

@@ -4,19 +4,23 @@
 
 require_relative 'factory'
 
-class Client 
-	def initialize
-    @factory = Factory.get_instance
+class Client
+  attr_writer :type
+
+	def initialize(type)
+    @type = type
   end
 
 	def foo
-		@factory.create_product_A.do_your_stuff
-    @factory.create_product_B.do_it
-    @factory.create_product_C.perform
+    @type.new.create_product_A.do_your_stuff
+    @type.new.create_product_B.do_it
+    @type.new.create_product_C.perform
 	end
 end
 
 
-my_client = Client.new
+my_client = Client.new(CoolFactory)
 my_client.foo
 
+my_client2 = Client.new(UnCoolFactory)
+my_client2.foo

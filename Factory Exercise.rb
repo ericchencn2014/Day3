@@ -6,7 +6,7 @@ require_relative 'factory'
 
 class Client 
 	def initialize
-    @factory = Factory.new
+    @factory = Factory.get_instance
   end
 
 	def foo

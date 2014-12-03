@@ -24,3 +24,6 @@ my_client.foo
 
 my_client2 = Client.new(UnCoolFactory)
 my_client2.foo
+
+my_client3 = Client.new(DeadlyFactory)
+my_client3.foo
